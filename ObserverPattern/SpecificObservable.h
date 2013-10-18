@@ -90,6 +90,7 @@ void SpecificObservable::DetachObserver(IObserver* obs)
 	{
 		if (observer_list[i] != nullptr && observer_list[i] == obs)
 		{
+			delete observer_list[i];
 			observer_list[i] = nullptr;
 		}
 	}
